@@ -1,1 +1,1 @@
-web: java -jar build/libs/risk-1.0.jar
+web: java -jar build/libs/risk-3.0-SNAPSHOT-all.jar
