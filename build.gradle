@@ -74,6 +74,10 @@ task deployFull(type: Copy) {
     into "build/deployFull"
 }
 
+task stage(dependsOn: ['build', 'clean']) {
+    build.mustRunAfter clean
+}
+
 task zipDeploy(type: Zip) {
     dependsOn deployFull
     include 'README.md'
