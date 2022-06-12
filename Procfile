@@ -1,0 +1,1 @@
+web: java -jar build/libs/risk-1.0.jar
