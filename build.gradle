@@ -4,10 +4,8 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '6.1.0'
 }
 
+version = '3.0.0'
 mainClassName = "com.dreamteam.view.HomeScreenFrame"
-
-group 'com.dreamteam'
-version '3.0-SNAPSHOT'
 
 sourceCompatibility = 15
 
@@ -15,6 +13,7 @@ repositories {
     mavenCentral()
     jcenter()
 }
+
 
 configurations {
     jaxDoclet
