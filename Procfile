@@ -1,1 +1,1 @@
-web: java -jar build/libs/risk-3.0-SNAPSHOT-all.jar
+web: java -Dserver.port=2000 -jar build/libs/risk-3.0-SNAPSHOT-all.jar
