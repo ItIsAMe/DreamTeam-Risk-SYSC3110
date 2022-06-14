@@ -73,6 +73,8 @@ task deployFull(type: Copy) {
     into "build/deployFull"
 }
 
+build.mustRunAfter clean
+
 task stage {
     dependsOn build
 }
