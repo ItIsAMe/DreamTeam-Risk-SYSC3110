@@ -1,22 +1,20 @@
+
 plugins {
     id 'java'
     id 'application'
     id 'com.github.johnrengelman.shadow' version '6.1.0'
 }
-version "3.0.0"
-jar {
-    baseName 'risk'
-}
+
+group 'com.risk'
+version '1.0-SNAPSHOT'
 
 mainClassName = "com.dreamteam.view.HomeScreenFrame"
-
 sourceCompatibility = 15
 
 repositories {
     mavenCentral()
     jcenter()
 }
-
 
 configurations {
     jaxDoclet
@@ -29,7 +27,6 @@ dependencies {
 
 test {
     useJUnit()
-
     maxHeapSize = '1G'
 }
 
@@ -76,8 +73,8 @@ task deployFull(type: Copy) {
     into "build/deployFull"
 }
 
-task stage(dependsOn: ['build', 'clean']) {
-    build.mustRunAfter clean
+task stage {
+    dependsOn build
 }
 
 gradle.taskGraph.whenReady {
