@@ -1,1 +1,1 @@
-web: java -jar build/libs/risk-all.jar
+web: java -jar build/libs/risk-app-3.0.0-all.jar
