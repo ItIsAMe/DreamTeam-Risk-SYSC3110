@@ -1,14 +1,11 @@
-
 plugins {
     id 'java'
     id 'application'
     id 'com.github.johnrengelman.shadow' version '6.1.0'
 }
 
-group 'com.risk'
-version '1.0-SNAPSHOT'
-
 mainClassName = "com.dreamteam.view.HomeScreenFrame"
+applicationName = "riskApp"
 sourceCompatibility = 15
 
 repositories {
@@ -73,12 +70,8 @@ task deployFull(type: Copy) {
     into "build/deployFull"
 }
 
+task stage(dependsOn: ['clean', 'build'])
 build.mustRunAfter clean
-
-task stage {
-    dependsOn build
-}
-
 gradle.taskGraph.whenReady {
     taskGraph ->
         if (taskGraph.hasTask(stage)) {
