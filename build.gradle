@@ -3,8 +3,11 @@ plugins {
     id 'application'
     id 'com.github.johnrengelman.shadow' version '6.1.0'
 }
+version "3.0.0"
+jar {
+    baseName 'risk'
+}
 
-version = '3.0.0'
 mainClassName = "com.dreamteam.view.HomeScreenFrame"
 
 sourceCompatibility = 15
